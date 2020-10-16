@@ -99,22 +99,22 @@ const wordsUnique = [
   'bring'
 ];
 
-// Const uniquifyArray = wordsUnique => {
- // if (!wordsUnique.length) return null;
- // let uniqueArr = [];
- //  for (let i = 0; i < wordsUnique.length; i++) {
- // let word = wordsUnique[i];
-
-  //  if (uniqueArr.indexOf(word) < 0) {
-  //       uniqueArr.push(word);
- //      }
- //    }
- // for (let word of wordsUnique) {
- //   if (!uniqueArr.includes(word)) uniqueArr.push(word);
- // }
- // return uniqueArr
-  //);
-
+function uniquifyArray(firstArray) {
+  if (firstArray.length > 0) {
+    let newArray = [];
+    for (let i = 0; i < firstArray.length; i++) {
+      if (newArray.indexOf(firstArray[i]) < 0) {
+        newArray.push(firstArray[i]);
+      }
+    }
+    return newArray;
+  }
+  else if (firstArray.length === 0) {
+    return null;
+  }
+}
+uniquifyArray(wordsUnique);
+console.log(uniquifyArray(wordsUnique));
 
 
 
